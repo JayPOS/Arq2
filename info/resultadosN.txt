@@ -1,0 +1,7 @@
+Teste com Matriz normal metodo padrao 
+
+Time IdentidadeN: 9.56543
+Level 1 cache misses: 252375
+Level 2 total cache accesses: 12459
+Level 2 data cache misses: 564252
+Load/store instructions completed: 60018826

@@ -1,0 +1,7 @@
+Teste com Matriz em Vet e AVX 
+
+Time Identidade3: 5.69434 ms
+Level 1 cache misses: 254141
+Level 2 total cache accesses: 15657
+Level 2 data cache misses: 563087
+Load/store instructions completed: 19519193

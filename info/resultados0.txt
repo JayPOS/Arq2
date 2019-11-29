@@ -1,0 +1,7 @@
+Teste com Matriz em vet padrao
+
+Time Identidade0: 10.88208
+Level 1 cache misses: 253799
+Level 2 total cache accesses: 19754
+Level 2 data cache misses: 568329
+Load/store instructions completed: 64044850

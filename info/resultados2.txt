@@ -1,0 +1,7 @@
+Teste com Matriz em Vet metodo 2(Checa_linhas)
+
+Time Identidade01: 9.18848 ms
+Level 1 cache misses: 253887
+Level 2 total cache accesses: 13754
+Level 2 data cache misses: 566173
+Load/store instructions completed: 48032859

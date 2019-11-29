@@ -1,0 +1,7 @@
+Teste com Matriz em Vet metodo 1 (soma_modulos)
+
+Time Identidade01: 8.74854
+Level 1 cache misses: 253816
+Level 2 total cache accesses: 13639
+Level 2 data cache misses: 565650
+Load/store instructions completed: 48032859
