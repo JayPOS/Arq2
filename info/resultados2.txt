@@ -1,7 +1,30 @@
+Tamanho da matriz: 2000x2000 
+
 Teste com Matriz em Vet metodo 2(Checa_linhas)
 
-Time Identidade01: 9.18848 ms
-Level 1 cache misses: 253887
-Level 2 total cache accesses: 13754
-Level 2 data cache misses: 566173
+Time Identidade01: 9.24438 ms
+Level 1 cache misses: 253900
+Level 2 total cache accesses: 14757
+Level 2 data cache misses: 565438
 Load/store instructions completed: 48032859
+
+Tamanho da matriz: 200x200 
+
+Teste com Matriz em Vet metodo 2(Checa_linhas)
+
+Time Identidade01: 0.10693 ms
+Level 1 cache misses: 3266
+Level 2 total cache accesses: 1327
+Level 2 data cache misses: 6075
+Load/store instructions completed: 484059
+
+Tamanho da matriz: 20000x20000 
+
+Teste com Matriz em Vet metodo 2(Checa_linhas)
+
+Time Identidade01: 870.51587 ms
+Level 1 cache misses: 25101155
+Level 2 total cache accesses: 1112786
+Level 2 data cache misses: 56110224
+Load/store instructions completed: 4800320885
+

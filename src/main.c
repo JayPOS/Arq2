@@ -75,18 +75,19 @@ double ident_tempoN(Matriz_N *mat)
 	}
 
     FILE *file = NULL;
-    file = fopen("./info/resultadosN.txt", "w");
+    file = fopen("./info/resultadosN.txt", "a+");
     if (file == NULL)
     {
         printf("Arquivo invalido\n");
         exit(1);
     }
+	fprintf(file, "Tamanho da matriz: %dx%d \n\n", mat->l, mat->c);
     fprintf(file, "Teste com Matriz normal metodo padrao \n\n");
-    fprintf(file, "Time IdentidadeN: %.5lf\n", fimSec -iniSec);
+    fprintf(file, "Time IdentidadeN: %.5lf ms\n", fimSec -iniSec);
     fprintf(file, "Level 1 cache misses: %lld\n", values[0]);
     fprintf(file, "Level 2 total cache accesses: %lld\n", values[1]);
     fprintf(file, "Level 2 data cache misses: %lld\n", values[2]);
-    fprintf(file, "Load/store instructions completed: %lld\n", values[3]);
+    fprintf(file, "Load/store instructions completed: %lld\n\n", values[3]);
 
     fclose(file);
 
@@ -162,18 +163,19 @@ double ident_tempo(Matriz_V *mat)
 	}
 
     FILE *file = NULL;
-    file = fopen("./info/resultados0.txt", "w");
+    file = fopen("./info/resultados0.txt", "a+");
     if (file == NULL)
     {
         printf("Arquivo invalido\n");
         exit(1);
     }
+	fprintf(file, "Tamanho da matriz: %dx%d \n\n", mat->l, mat->c);
     fprintf(file, "Teste com Matriz em vet padrao\n\n");
-    fprintf(file, "Time Identidade0: %.5lf\n", fimSec -iniSec);
+    fprintf(file, "Time Identidade0: %.5lf ms\n", fimSec -iniSec);
     fprintf(file, "Level 1 cache misses: %lld\n", values[0]);
     fprintf(file, "Level 2 total cache accesses: %lld\n", values[1]);
     fprintf(file, "Level 2 data cache misses: %lld\n", values[2]);
-    fprintf(file, "Load/store instructions completed: %lld\n", values[3]);
+    fprintf(file, "Load/store instructions completed: %lld\n\n", values[3]);
 
     fclose(file);
 
@@ -248,18 +250,19 @@ double ident_tempo01(Matriz_V *mat)
 	}
 
     FILE *file = NULL;
-    file = fopen("./info/resultados.txt", "w");
+    file = fopen("./info/resultados.txt", "a+");
     if (file == NULL)
     {
         printf("Arquivo invalido\n");
         exit(1);
     }
+	fprintf(file, "Tamanho da matriz: %dx%d \n\n", mat->l, mat->c);
     fprintf(file, "Teste com Matriz em Vet metodo 1 (soma_modulos)\n\n");
-    fprintf(file, "Time Identidade01: %.5lf\n", fimSec -iniSec);
+    fprintf(file, "Time Identidade01: %.5lf ms\n", fimSec -iniSec);
     fprintf(file, "Level 1 cache misses: %lld\n", values[0]);
     fprintf(file, "Level 2 total cache accesses: %lld\n", values[1]);
     fprintf(file, "Level 2 data cache misses: %lld\n", values[2]);
-    fprintf(file, "Load/store instructions completed: %lld\n", values[3]);
+    fprintf(file, "Load/store instructions completed: %lld\n\n", values[3]);
 
     fclose(file);
 
@@ -336,18 +339,19 @@ double ident_tempo02(Matriz_V *mat)
 	}
 
     FILE *file = NULL;
-    file = fopen("./info/resultados2.txt", "w");
+    file = fopen("./info/resultados2.txt", "a+");
     if (file == NULL)
     {
         printf("Arquivo invalido\n");
         exit(1);
     }
+	fprintf(file, "Tamanho da matriz: %dx%d \n\n", mat->l, mat->c);
     fprintf(file, "Teste com Matriz em Vet metodo 2(Checa_linhas)\n\n");
     fprintf(file, "Time Identidade01: %.5lf ms\n", fimSec -iniSec);
     fprintf(file, "Level 1 cache misses: %lld\n", values[0]);
     fprintf(file, "Level 2 total cache accesses: %lld\n", values[1]);
     fprintf(file, "Level 2 data cache misses: %lld\n", values[2]);
-    fprintf(file, "Load/store instructions completed: %lld\n", values[3]);
+    fprintf(file, "Load/store instructions completed: %lld\n\n", values[3]);
 
     fclose(file);
 
@@ -422,18 +426,19 @@ double ident_tempo03(Matriz_V *mat)
 	}
 
     FILE *file = NULL;
-    file = fopen("./info/resultados3.txt", "w");
+    file = fopen("./info/resultados3.txt", "a+");
     if (file == NULL)
     {
         printf("Arquivo invalido\n");
         exit(1);
     }
+	fprintf(file, "Tamanho da matriz: %dx%d \n\n", mat->l, mat->c);
     fprintf(file, "Teste com Matriz em Vet e AVX \n\n");
     fprintf(file, "Time Identidade3: %.5lf ms\n", fimSec - iniSec);
     fprintf(file, "Level 1 cache misses: %lld\n", values[0]);
     fprintf(file, "Level 2 total cache accesses: %lld\n", values[1]);
     fprintf(file, "Level 2 data cache misses: %lld\n", values[2]);
-    fprintf(file, "Load/store instructions completed: %lld\n", values[3]);
+    fprintf(file, "Load/store instructions completed: %lld\n\n", values[3]);
 
     fclose(file);
 
@@ -443,12 +448,31 @@ int main()
 {
     Matriz_N *opa = gera_matrizN(IDENTIDADE, 2000, 2000);
     Matriz_V *opa2 = gera_matrizV(IDENTIDADE, 2000, 2000);
+	Matriz_N *opa_pequeno = gera_matrizN(IDENTIDADE, 200, 200);
+    Matriz_V *opa2_pequeno = gera_matrizV(IDENTIDADE, 200, 200);
+	Matriz_N *opa_grande = gera_matrizN(IDENTIDADE, 20000, 20000);
+    Matriz_V *opa2_grande = gera_matrizV(IDENTIDADE, 20000, 20000);
     // printf("%d\n", opa2->matriz[399999999]);
     printf("TempoAVX: %lf\n", ident_tempo03(opa2));
+	ident_tempo03(opa2_pequeno);
+	ident_tempo03(opa2_grande);
     printf("Tempo2: %lf\n", ident_tempo02(opa2));
+	ident_tempo02(opa2_pequeno);
+	ident_tempo02(opa2_grande);
     printf("Tempo1: %lf\n", ident_tempo01(opa2));
+	ident_tempo01(opa2_pequeno);
+	ident_tempo01(opa2_grande);
     printf("Tempo0: %lf\n", ident_tempo(opa2));
+	ident_tempo(opa2_pequeno);
+	ident_tempo(opa2_grande);
     printf("TempoN: %lf\n", ident_tempoN(opa));
+	ident_tempoN(opa_pequeno);
+	ident_tempoN(opa_grande);
     liberaV(opa2);
+	liberaV(opa2_pequeno);
+	liberaV(opa2_grande);
+	liberaN(opa);
+	liberaN(opa_pequeno);
+	liberaN(opa_grande);
     return 0;
 }

@@ -1,7 +1,30 @@
+Tamanho da matriz: 2000x2000 
+
 Teste com Matriz em Vet metodo 1 (soma_modulos)
 
-Time Identidade01: 8.74854
-Level 1 cache misses: 253816
-Level 2 total cache accesses: 13639
-Level 2 data cache misses: 565650
+Time Identidade01: 9.57739 ms
+Level 1 cache misses: 253975
+Level 2 total cache accesses: 14738
+Level 2 data cache misses: 562851
 Load/store instructions completed: 48032859
+
+Tamanho da matriz: 200x200 
+
+Teste com Matriz em Vet metodo 1 (soma_modulos)
+
+Time Identidade01: 0.09253 ms
+Level 1 cache misses: 3260
+Level 2 total cache accesses: 1287
+Level 2 data cache misses: 5987
+Load/store instructions completed: 484059
+
+Tamanho da matriz: 20000x20000 
+
+Teste com Matriz em Vet metodo 1 (soma_modulos)
+
+Time Identidade01: 871.31934 ms
+Level 1 cache misses: 25101076
+Level 2 total cache accesses: 1113162
+Level 2 data cache misses: 56111845
+Load/store instructions completed: 4800320862
+

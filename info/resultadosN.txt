@@ -1,7 +1,30 @@
+Tamanho da matriz: 2000x2000 
+
 Teste com Matriz normal metodo padrao 
 
-Time IdentidadeN: 9.56543
-Level 1 cache misses: 252375
-Level 2 total cache accesses: 12459
-Level 2 data cache misses: 564252
-Load/store instructions completed: 60018826
+Time IdentidadeN: 10.24829 ms
+Level 1 cache misses: 252549
+Level 2 total cache accesses: 12154
+Level 2 data cache misses: 561860
+Load/store instructions completed: 60018827
+
+Tamanho da matriz: 200x200 
+
+Teste com Matriz normal metodo padrao 
+
+Time IdentidadeN: 0.11206 ms
+Level 1 cache misses: 3116
+Level 2 total cache accesses: 1209
+Level 2 data cache misses: 6118
+Load/store instructions completed: 602627
+
+Tamanho da matriz: 20000x20000 
+
+Teste com Matriz normal metodo padrao 
+
+Time IdentidadeN: 983.92700 ms
+Level 1 cache misses: 25079054
+Level 2 total cache accesses: 1024459
+Level 2 data cache misses: 56177087
+Load/store instructions completed: 6000180828
+

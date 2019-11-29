@@ -1,7 +1,30 @@
+Tamanho da matriz: 2000x2000 
+
 Teste com Matriz em vet padrao
 
-Time Identidade0: 10.88208
-Level 1 cache misses: 253799
-Level 2 total cache accesses: 19754
-Level 2 data cache misses: 568329
+Time Identidade0: 10.95850 ms
+Level 1 cache misses: 253973
+Level 2 total cache accesses: 19369
+Level 2 data cache misses: 568737
 Load/store instructions completed: 64044850
+
+Tamanho da matriz: 200x200 
+
+Teste com Matriz em vet padrao
+
+Time Identidade0: 0.12402 ms
+Level 1 cache misses: 3211
+Level 2 total cache accesses: 1457
+Level 2 data cache misses: 5968
+Load/store instructions completed: 645250
+
+Tamanho da matriz: 20000x20000 
+
+Teste com Matriz em vet padrao
+
+Time Identidade0: 1062.22339 ms
+Level 1 cache misses: 25112994
+Level 2 total cache accesses: 1464423
+Level 2 data cache misses: 56313910
+Load/store instructions completed: 6400440850
+

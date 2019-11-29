@@ -13,4 +13,4 @@ vetorizado.o: ./src/vetorizado.c
 	$(CC) -c ./src/vetorizado.c $(FLAGS)
 
 clear:
-	rm -r *.o
+	rm -r *.o ./info/resul*
